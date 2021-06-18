@@ -11,7 +11,7 @@ export const Start = (props)=> {
       <Row>
         <Col md="auto" className="description-row narrow ">
           <Row>
-          <h2>Καλος ηρθατε</h2>
+          <h2>Καλος Ηρθατε!</h2>
           {/*<Button  onClick={()=>{shufleAlg();}}>Ανακάτεμα</Button>*/}
           </Row>
           <Row>

@@ -60,7 +60,7 @@ const Challenge = (props)=> {
     <div className="challenge-container">
       <div className='challenge-question'>
         <span>{solved<1?"Ας υποθέσουμε ότι ότι αρχικοποιούμε τον αλγόριθμο με τις τιμές a = 4 και b = 20. Μετά την πρώτη επανάληψη του Αλγορίθμου τι τιμές θα έχουν οι μεταβλητές a και b;":null}</span>
-        <span>{solved===1?"Πόσες φορές θα εκτελεστεί ο κώδικας που βρίσκεται μέσα στον βρόγχο επαναλληψης ΟΣΟ;":null}</span>
+        <span>{solved===1?"Πόσες φορές θα εκτελεστεί ο κώδικας που βρίσκεται μέσα στον βρόχο επανάληψης ΟΣΟ;":null}</span>
       </div>
         <div className='challenge-input-container'>
           <Row>
@@ -100,7 +100,7 @@ const Challenge = (props)=> {
             {solved===1?
             <InputGroup className="mb-3 challenge-input-2" >
               <InputGroup.Prepend>
-                <InputGroup.Text id="basic-addon1">Αριθμός Επαναλλήψεων =</InputGroup.Text>
+                <InputGroup.Text id="basic-addon1">Αριθμός Επαναλήψεων =</InputGroup.Text>
               </InputGroup.Prepend>
               <FormControl
                 placeholder=""
@@ -247,7 +247,7 @@ export function Test() {
                             <div className="button-container-inner">
                               <Button disabled={solved} onClick={()=>{solveOrder();}}>Λύση</Button>
                               <Button variant={!solved?'success':'secondary'}  disabled={solved} onClick={()=>{checkOrder();}}>Έλεγχος Λύσης</Button>
-                              <Button variant={solved?'success':'secondary'}   onClick={()=>{if(challengesSolved){nextAlg();}else{setHiddenSolved(true);}}}>Συνέχεια <FontAwesomeIcon icon={faArrowRight}/></Button>
+                              <Button variant={solved?'success':'secondary'} disabled={!solved}  onClick={()=>{if(challengesSolved){nextAlg();}else{setHiddenSolved(true);}}}>Συνέχεια <FontAwesomeIcon icon={faArrowRight}/></Button>
                             </div>
                           </div>
                         </div>
